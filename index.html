@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="logic.js" defer></script>
+  <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Tic-Tac-Toe</h1>
+  </div>
+  <div class="content">
+    <p id="current-player-header">
+      Start a new <bold class="special-text">Game</bold>
+    </p>
+    <div class="board">
+      <div class="cell" id="cell-0-0"></div>
+      <div class="cell" id="cell-0-1"></div>
+      <div class="cell" id="cell-0-2"></div>
+      <div class="cell" id="cell-1-0"></div>
+      <div class="cell" id="cell-1-1"></div>
+      <div class="cell" id="cell-1-2"></div>
+      <div class="cell" id="cell-2-0"></div>
+      <div class="cell" id="cell-2-1"></div>
+      <div class="cell" id="cell-2-2"></div>
+    </div>
+    <div class="content-right-side-bar">
+      <h2>Score Board</h2>
+      <h3>Player 1: 0 points</h3>
+      <h3>Player 2: 0 points</h3>
+    </div>
+    <div class="content-options">
+      <button id="new-game-button">Start New Game</button>
+      <button id="next-round-button">Play Next Round</button>
+    </div>
+    <div class="result">
+      <div class="winner-details">
+        <span class="special-text">No Player</span> has won yet
+      </div>
+    </div>
+  </div>
+  <div class="footer">Made by M M Kaverappa</div>
+  <dialog id="start-game-dialog">
+    <p>Enter the details</p>
+    <form>
+      <fieldset>
+        <legend>Player Names</legend>
+        <p>
+          <label for="player1-name">Enter name of first player <strong>*</strong></label>
+          <br />
+          <input type="text" id="player1-name" required />
+        </p>
+        <p>
+          <label for="player2-name">Enter name of second player <strong>*</strong></label>
+          <br />
+          <input type="text" id="player2-name" required />
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose which Player will play first</legend>
+        <input type="radio" id="player1-first" name="choice" value="player1" checked />
+        <label for="player1-first">First Player</label>
+        <input type="radio" id="player2-first" name="choice" value="player2" />
+        <label for="player2-first">Second Player</label>
+      </fieldset>
+    </form>
+    <div class="dialog-bottom">
+      <button id="dialog-close-button">Close</button>
+      <button id="dialog-submit-button">Submit</button>
+    </div>
+  </dialog>
+</body>
+
+</html>
