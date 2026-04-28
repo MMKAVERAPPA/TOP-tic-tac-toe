@@ -60,14 +60,29 @@ body {
 
 .cell {
   text-align: center;
-  font-size: 36px;
+  font-size: 45px;
   font-weight: bolder;
   border: 4px solid var(--purple-color);
   line-height: 100px;
 }
 
+.highlight {
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
 .cell:hover {
   border: 6px solid var(--light-purple-color);
+}
+
+.board.game-over .cell:hover {
+  border: 4px solid var(--purple-color);
+  cursor: not-allowed;
+}
+
+.filled {
+  background-color: var(--purple-color);
+  color: white;
 }
 
 .content-right-side-bar {
@@ -111,6 +126,12 @@ body {
   background-color: #75d19d;
 }
 
+#next-round-button:disabled,
+#next-round-button:hover:disabled {
+  opacity: 0.2;
+  background-color: #32965d;
+}
+
 #start-game-dialog {
   border-radius: 10px;
   background-color: var(--lavender-veil);
@@ -146,6 +167,11 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.winner-details {
+  font-weight: bold;
+  font-size: 32px;
 }
 
 #dialog-close-button,
